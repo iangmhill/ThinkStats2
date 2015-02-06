@@ -56,6 +56,15 @@ def main():
     thinkplot.Show(xlabel='household income',
                    ylabel='CDF')
 
+def get_cdf():
+    df = hinc.ReadData()
+    log_sample = InterpolateSample(df, log_upper=6.0)
+    return thinkstats2.Cdf(log_sample)
+
+def get_dataframe():
+    return hinc.ReadData()
+
+
 
 if __name__ == "__main__":
     main()
