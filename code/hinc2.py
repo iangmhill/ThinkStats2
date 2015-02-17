@@ -61,6 +61,11 @@ def get_cdf():
     log_sample = InterpolateSample(df, log_upper=6.0)
     return thinkstats2.Cdf(log_sample)
 
+def get_sample():
+    df = hinc.ReadData()
+    log_sample = InterpolateSample(df, log_upper=6.0)
+    return log_sample
+
 def get_dataframe():
     return hinc.ReadData()
 
